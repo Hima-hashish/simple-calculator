@@ -1,0 +1,122 @@
+.parent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: black;
+  width: 300px;
+  height: 395px;
+  border-radius: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.parent button:not(.screen, .orange) {
+  background-color: white;
+}
+
+.parent button:not(.screen, .orange):hover {
+  box-shadow: 0 0 4px 4px blue;
+  cursor: pointer;
+}
+
+.parent button,
+.screen {
+  display: grid;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.screen {
+  background-color: #a3d3c9;
+  grid-column: span 4;
+  height: 60px;
+}
+
+.screen::-webkit-scrollbar {
+  display: none;
+}
+
+.deq,
+.equal,
+.on {
+  color: transparent;
+  position: relative;
+}
+
+.deq::before,
+.equal::before,
+.on::before {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.deq::before {
+  content: "×";
+}
+
+.equal::before {
+  content: "=";
+}
+
+.on::before {
+  content: "÷";
+}
+
+/* .screen {
+        overflow: inherit;
+    } */
+
+.top {
+  display: flex;
+  grid-column: span 4;
+}
+
+.rem {
+  font-size: 18px !important;
+}
+
+.orange {
+  background-color: #e56228;
+  color: white;
+  cursor: pointer;
+  width: 110px;
+  margin-left: auto;
+}
+
+.orange:hover {
+  border: 2px solid red;
+}
+
+.os {
+  color: transparent;
+  position: relative;
+}
+
+.os::before {
+  content: "x²";
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.row {
+  grid-row: 6 / 8;
+  grid-column: 4;
+}
